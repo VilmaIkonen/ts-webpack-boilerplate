@@ -1,5 +1,5 @@
-import ComputerOne from './Components/Computers/ComputerOne';
-import ComputerTwo from './Components/Computers/ComputerTwo';
+import ComputerOne from './Components/ComputerOne';
+import ComputerTwo from './Components/ComputerTwo';
 
 
 let computerOne: ComputerOne = new ComputerOne(1);

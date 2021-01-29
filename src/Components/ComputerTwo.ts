@@ -1,4 +1,4 @@
-import Convertable from "../Convertable";
+import Convertable from "../Interfaces/Convertable";
 
 class ComputerTwo {
   converter: Convertable;
