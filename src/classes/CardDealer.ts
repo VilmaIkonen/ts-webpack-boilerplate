@@ -1,7 +1,7 @@
 import AbstractPlayer from './AbstractPlayer';
 import Card from './Card';
 
-export class CardDealer {
+class CardDealer {
   private deck: Card[] = [];
 
   constructor(counter: Number){
@@ -17,3 +17,5 @@ export class CardDealer {
     player.receiveCard(card);
   }
 }
+
+export default CardDealer;

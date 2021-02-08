@@ -1,7 +1,7 @@
 import PlayerBehavior from '../interfaces/PlayerBehavior';
 import Card from './Card';
 
-export abstract class AbstractPlayer implements PlayerBehavior {
+abstract class AbstractPlayer implements PlayerBehavior {
   private holdings: Card[] = [];
   private max: number;
 
@@ -21,3 +21,5 @@ export abstract class AbstractPlayer implements PlayerBehavior {
     return this.holdings;
   }
 }
+
+export default AbstractPlayer;
