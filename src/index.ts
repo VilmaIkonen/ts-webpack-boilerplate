@@ -11,18 +11,20 @@ const players = [
 const dealer = new CardDealer(52);
 
 players.forEach(player => {
-	let counter = 3;
+	let counter = 2;
 	while (Boolean(counter--)) {
-			dealer.dealTo(player);
+		dealer.dealTo(player);
 	}
 })
 
 players.forEach(player => {
 	while(player.requestCard()) {
-			dealer.dealTo(player);
+		dealer.dealTo(player);
 	}
 })
+const winningScore = players
+	.map(player => player.getSum() <= 21 ? player.getSum() : 0)
+	.sort((a, b) => b - a)[0];
 
-players.forEach(player => {
-	console.log(player.reviewCards())
-})
+	console.log('Winning score is' + winningScore);
+	players.forEach(player => player.announceCards());
